@@ -5,7 +5,7 @@ export const Navbar = () => {
   return (
     <Link
       to={'/'}
-      className="flex justify-start items-center h-12 mb-36 md:mb-36"
+      className="flex justify-start items-center h-12 mb-36 md:mb-0"
     >
       <img
         className="w-12 h-12"
