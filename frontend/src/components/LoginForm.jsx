@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 export const LoginForm = () => {
   return (
-    <form className="flex flex-col p-6 w-11/12 shadow-md rounded-md max-w-md">
+    <form className="flex flex-col p-2 w-11/12 shadow-md rounded-md max-w-md">
       <label>Username: </label>
       <input
         placeholder="Enter your username"

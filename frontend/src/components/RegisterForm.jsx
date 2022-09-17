@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom'
 
 export const RegisterForm = () => {
   return (
-    <form className="flex flex-col p-6 w-11/12 shadow-md rounded-md max-w-md">
+    <form className="flex flex-col p-2 w-11/12 shadow-md rounded-md max-w-md">
       <label>Username: </label>
-      <input
+      <input  
         placeholder="Enter your username"
         className="border rounded-md border-gray-900 my-3 p-3"
         type="text"
