@@ -18,5 +18,22 @@ const register = async (req, res) => {
     res.json({ username, token })
 }
 
-module.exports = { register }
+const login = async (req, res) => {
+    const { username, password } = req.body
+
+    const user = await User.findOne({ username })
+    if (!user) {
+        return
+    }
+
+    const match = await bcryptjs.compare(password, user.password)
+    if (!match) {
+        return
+    }
+    const token = jwt.sign({ id: user._id }, process.env.SECRET, { expiresIn: '3d' })
+
+    res.json({ username, token })
+}
+
+module.exports = { register, login }
 
