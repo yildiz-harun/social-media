@@ -19,8 +19,7 @@ export const RegisterForm = () => {
     //   username: response.data.username,
     //   token: response.data.token,
     // }
-    document.cookie =
-      'user=' + JSON.stringify(response.data)
+    document.cookie = JSON.stringify(response.data)
     //save the token
   }
 
