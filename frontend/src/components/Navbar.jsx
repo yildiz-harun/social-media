@@ -18,7 +18,7 @@ export const Navbar = () => {
   )
 
   return (
-    <div className=" bg-zinc-50 flex justify-between items-center h-12 mb-36 md:mb-0">
+    <div className=" bg-zinc-50 flex justify-between items-center h-12 ">
       <div className="flex items-center">
         <Link to={'/'}>
           <img
@@ -29,7 +29,7 @@ export const Navbar = () => {
         </Link>
         <Link to={'/'}>
           <h1 className="text-lg">
-            Social Media
+            Lorem
           </h1>
         </Link>
       </div>
