@@ -16,4 +16,4 @@ const { userRouter } = require("./routes/user")
 const { postRouter } = require("./routes/post")
 
 app.use("/api/user", userRouter)
-app.use("/api/post", postRouter)
+app.use("/api/posts", postRouter)
