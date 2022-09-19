@@ -13,4 +13,7 @@ app.listen("5000", () => {
 })
 
 const { userRouter } = require("./routes/user")
+const { postRouter } = require("./routes/post")
+
 app.use("/api/user", userRouter)
+app.use("/api/post", postRouter)
