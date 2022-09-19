@@ -13,6 +13,9 @@ const getPost = async (req, res) => {
 
 const createPost = async (req, res) => {
     const { value } = req.body
+    if (!value) {
+        return
+    }
     const post = await Post.create({ value })
     res.json(post)
 }
