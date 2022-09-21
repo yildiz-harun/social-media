@@ -1,7 +1,9 @@
 const { Post } = require("../models/post.js")
 
 const getPosts = async (req, res) => {
-    const posts = await Post.find({}).sort({ createdAt: -1 })
+    const user_id = req.user
+
+    const posts = await Post.find({ user_id }).sort({ createdAt: -1 })
     res.json(posts)
 }
 
@@ -12,11 +14,14 @@ const getPost = async (req, res) => {
 }
 
 const createPost = async (req, res) => {
+    const user_id = req.user
+    console.log(req.user);
     const { value } = req.body
     if (!value) {
         return
     }
-    const post = await Post.create({ value })
+    console.log("1");
+    const post = await Post.create({ value, user_id })
     res.json(post)
 }
 
@@ -29,6 +34,7 @@ const updatePost = async (req, res) => {
 
 const deletePost = async (req, res) => {
     const { id } = req.params
+    console.log("delete in backend");
     const post = await Post.findOneAndDelete({ _id: id })
     res.json(post)
 }
